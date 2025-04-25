@@ -12,7 +12,8 @@ def about():
 
 @app.route('/tasks')
 def list_tasks():
-    return "Lista de tareas"
+    tarea="Aprender Flask"
+    return render_template('tasks.html',t=tarea)
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5001)
